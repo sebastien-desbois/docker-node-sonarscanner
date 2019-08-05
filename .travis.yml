@@ -1,0 +1,7 @@
+language: ruby
+
+services:
+  - docker
+
+image-build:
+  - docker build -t sdesbois/docker-node-sonarscanner:latest .
