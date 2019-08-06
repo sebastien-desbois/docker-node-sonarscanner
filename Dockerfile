@@ -6,5 +6,6 @@ RUN apk add --no-cache unzip openjdk8-jre \
     && unzip sonar-scanner-cli-3.3.0.1492.zip \
 	&& ln -s /sonar-scanner-3.3.0.1492 /usr/bin/sonar-scanner \
     && rm -f sonar-scanner-cli-*.zip
+    && chmod -R 777 /sonar-scanner-3.3.0.1492
   
 ENV PATH $PATH:/sonar-scanner/bin:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin
